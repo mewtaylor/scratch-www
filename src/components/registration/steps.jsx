@@ -93,7 +93,7 @@ module.exports = {
             callback = callback || function () {};
             if (!username) {
                 this.refs.form.refs.formsy.updateInputsWithError({
-                    'user.username': formatMessage({id: 'teacherRegistration.validationRequired'})
+                    'user.username': this.props.intl.formatMessage({id: 'teacherRegistration.validationRequired'})
                 });
                 return callback(false);
             }
